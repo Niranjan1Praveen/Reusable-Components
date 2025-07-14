@@ -17,9 +17,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <section className="py-4 px-4 lg:py-8 flex items-center justify-center fixed w-full top-0 z-100">
-        <div className="container max-w-5xl">
-          <div className="rounded-[27px] md:rounded-full bg-neutral-950/70 backdrop-blur">
+      <section className="px-4 flex items-center justify-center fixed w-full top-0 z-100 border border-b-gray-900">
+        <div className="container">
+          <div className="rounded-[27px] md:rounded-full bg-[#0B0F19] backdrop-blur">
             <div className="grid grid-cols-2 lg:grid-cols-3 p-2 items-center px-4 md:pr-2">
               <div className="flex items-center">
                 <Image src={logo} alt="Logo Icon" className="h-13 w-12" />
@@ -27,7 +27,7 @@ export default function Navbar() {
                   <AuroraText
                     colors={["#4ade80", "#30f6d5", "#5EF7BA", "#06b6d4"]}
                   >
-                    AdversaNet
+                    Logo
                   </AuroraText>
                 </p>
               </div>
@@ -84,14 +84,13 @@ export default function Navbar() {
                 </svg>
                 <LoginLink>
                   <Button
-                    variant={"login"}
-                    className="cursor-pointer hidden md:inline-flex items-center"
+                    variant={"outline"}
+                    className="cursor-pointer hidden md:inline-flex items-center border-0"
                   >
                     Log in
                   </Button>
                 </LoginLink>
                 <Button
-                  variant={"signup"}
                   className="cursor-pointer hidden md:inline-flex items-center"
                 >
                   <a href="#pricing">Sign Up</a>

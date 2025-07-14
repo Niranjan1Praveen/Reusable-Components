@@ -1,108 +1,50 @@
-import FeatureCard from "@/components/ui/featureCard";
-import Tags from "@/components/ui/tags";
-import Image from "next/image";
-import Key from "@/components/ui/key";
-import dashboard from "@/assets/images/heroDesign.jpg";
-import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+'use client'
 
-const features = [
-  "Upload Custom or Sample Images",
-  "Apply FGSM, PGD, BIM Attacks",
-  "View Original vs. Perturbed Images",
-  "Model Confidence Score Charts",
-  "Visual Perturbation Heatmaps",
-  "Toggle Visualization Layers",
-  "Interactive Parameter Controls",
-];
+import { Bolt, Brain, BarChart } from 'lucide-react'
 
 export default function Features() {
   return (
-    <section
-      className="py-24 px-4 flex items-center justify-center"
-      id="features"
-    >
-      <div className="container">
-        <div className="flex justify-center">
-          <Tags title={"Platform Features"} />
-        </div>
-        <h2 className="text-3xl font-medium text-center mt-6 max-w-3xl mx-auto">
-          Explore{" "}
-          <span className="text-primary-400">Adversarial Vulnerabilities</span>{" "}
-          in AI
+    <section className="relative bg-[#0B0F19] text-white pt-20 pb-28 overflow-hidden">
+      {/* Top curved background */}
+      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-[#0B0F19] to-transparent rounded-b-[100%] pointer-events-none z-0" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 leading-snug">
+          Instant databases, intelligent queries, effortless insights.
         </h2>
-        {/* Feature Cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8">
-          {/* Card-1 */}
-          <FeatureCard
-            title={"Interactive Dashboard for Adversarial Attacks"}
-            description={
-              "Visualize the effect of adversarial perturbations on image classifiers. Upload images and apply attacks like FGSM, PGD, and DeepFool in real-time."
-            }
-            className="md:col-span-2 lg:col-span-1"
-          >
-            <div className="aspect-video flex items-center justify-center rounded-xl">
-              <Image
-                src={dashboard}
-                className="rounded-xl"
-                height={450}
-                width={450}
-                alt="dashboard design"
-              />
-            </div>
-          </FeatureCard>
 
-          {/* Card-2 */}
-          <FeatureCard
-            title={"Confidence Scores & Model Predictions"}
-            description={
-              "Compare how model predictions and confidence scores shift before and after attacks. Great for learning and debugging AI behavior."
-            }
-            className="md:col-span-2 lg:col-span-1"
-          >
-            <div className="aspect-video flex items-center justify-center">
-              <p className="text-3xl font-bold text-white/20 text-center leading-relaxed">
-                What <br />
-                <span className="bg-gradient-to-r from-primary-500 via-[#30f6d5] to-[#5EF7BA] bg-clip-text">
-                  changed
-                </span>{" "}
-                in the prediction?
-              </p>
+        <div className="grid gap-12 md:grid-cols-3">
+          <div className="flex flex-col items-start">
+            <div className="bg-blue-900 p-3 rounded-full mb-4">
+              <Bolt size={24} className="text-blue-400" />
             </div>
-          </FeatureCard>
+            <h3 className="text-lg font-semibold mb-2">Instant Database Instances</h3>
+            <p className="text-sm text-gray-400">
+              One-click deployment of fully configured databases like PostgreSQL, MongoDB, ClickHouse, Redis, and Neo4j, ready for immediate use.
+            </p>
+          </div>
 
-          {/* Card-3 */}
-          <FeatureCard
-            title={"Customizable Attack Parameters"}
-            description={
-              "Modify parameters like epsilon or iteration steps and see how they affect the success of attacks. Helps users grasp sensitivity and model robustness."
-            }
-            className="md:col-span-2 md:col-start-2 lg:col-span-1 lg:col-start-auto"
-          >
-            <div className="aspect-video flex items-center justify-center relative w-full overflow-hidden min-h-[200px]">
-              <OrbitingCircles radius={100}>
-                <Key className={"w-28 p-5 text-sm md:text-lg"}>Epsilon</Key>
-                <Key className={"w-28 p-5 text-sm md:text-lg"}>Alpha</Key>
-                <Key className={"w-28 p-5 text-sm md:text-lg"}>Iterations</Key>
-              </OrbitingCircles>
+          <div className="flex flex-col items-start">
+            <div className="bg-blue-900 p-3 rounded-full mb-4">
+              <Brain size={24} className="text-blue-400" />
             </div>
-          </FeatureCard>
-        </div>
+            <h3 className="text-lg font-semibold mb-2">AI-Powered Querying and Data Management</h3>
+            <p className="text-sm text-gray-400">
+              Natural language prompts are converted into complex queries, enabling seamless data interaction and automation, including CSV imports and external data integration.
+            </p>
+          </div>
 
-        {/* Other Features */}
-        <div className="mt-8 flex flex-wrap gap-3 justify-center">
-          {features.map((feature) => (
-            <div
-              key={feature}
-              className="inline-flex gap-3 items-center px-3 md:px-5 py-1.5 md:py-2 rounded-2xl hover:scale-105 transition duration-500 group"
-            >
-              <span className="bg-primary-400 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-xl group-hover:rotate-45 transition duration-500">
-                &#10038;
-              </span>
-              <span className="font-medium md:text-lg">{feature}</span>
+          <div className="flex flex-col items-start">
+            <div className="bg-blue-900 p-3 rounded-full mb-4">
+              <BarChart size={24} className="text-blue-400" />
             </div>
-          ))}
+            <h3 className="text-lg font-semibold mb-2">Seamless Data Visualization</h3>
+            <p className="text-sm text-gray-400">
+              Automatically generate dynamic charts and graphs from query results, making data analysis quick and visually intuitive.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

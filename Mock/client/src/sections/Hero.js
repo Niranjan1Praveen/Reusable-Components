@@ -18,7 +18,7 @@ export default function Hero() {
                 colorFrom="#4ade80"
                 colorTo="#06b6d4"
               >
-                Introducing AdversaNet
+                Introducing Logo
               </AnimatedGradientText>
               <ChevronRight
                 className="ml-1 size-4 stroke-neutral-500 transition-transform
@@ -28,18 +28,20 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-7xl font-medium mt-6 leading-tight text-center">
-            Understand and Visualize <br /> How AI Can Be{" "}
+            Suspendisse sfd egestas <br /> dsfsf sas sd {" "}
             <AuroraText colors={["#4ade80", "#30f6d5", "#5EF7BA", "#06b6d4"]}>
-              Fooled?
+              fdsfsf?
             </AuroraText>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground mt-8 leading-relaxed text-center">
-            Our interactive dashboard helps you explore adversarial attacks on
-            image classifiers. Upload images, apply attacks like FGSM and PGD,
-            and see how even small changes can trick powerful AI models—making
-            it easier to learn, teach, and build more secure systems.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            facilisi. Suspendisse potenti. Cras egestas, sapien nec cursus
+            cursus, justo purus ultricies arcu, eget volutpat risus nulla nec
+            ligula. Integer id arcu facilisis, suscipit sem sit amet, luctus
+            sem.
           </p>
+
           <div className="flex mt-8 md:max-w-lg mx-auto items-center justify-center gap-5">
             <RainbowButton
               variant={"outline"}
